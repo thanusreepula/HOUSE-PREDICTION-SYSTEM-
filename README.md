@@ -16,14 +16,14 @@ will_sell, the binary target: 1 if price is at or below the dataset median (~$46
 Final feature set used by the model: bedrooms, bathrooms, sqft_living, sqft_lot, floors, waterfront, view, condition, year_sold.
 
 # Tech Stack
-Python
-pandas
-scikit-learn — RandomForestClassifier (100 estimators), train_test_split, accuracy_score, classification_report
-Google Colab + Google Drive (data storage and loading)
-
+Python(pandas ,scikit-learn )
+Google Colab 
 
 # How to Run It
-Open HOUSE_PRICE_PREDICTION.ipynb in Google Colab.
-Mount your Google Drive when prompted.
-Update the CSV file path in the data-loading cell to point to your own copy of the dataset.
-Run all cells in order: data loading → cleaning → feature engineering → train/test split (80/20, random_state=42) → model training → evaluation → sample prediction → feature importance.
+1. Download HOUSE_PRICE_PREDICTION.ipynb from this repo, and download the dataset CSV
+2. Go to Google Colab and upload the notebook (File → Upload notebook).
+3. Upload the dataset CSV to your own Google Drive.
+4. Run the first cell — it will prompt you to authorize Google Drive access. Allow it.
+5. Find the cell with pd.read_csv(...) and update the file path to match where you placed the CSV in your Drive
+6. Run all cells in order
+7. If you hit a FileNotFoundError, double-check the path in step 5 matches exactly where the file sits in your Drive.
